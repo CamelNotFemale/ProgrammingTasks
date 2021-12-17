@@ -24,7 +24,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        if (args.length > 0 && args.length % 3 == 0) {
+        if (args.length > 2 && args.length % 2 == 1) {
             if (new HashSet<>(Arrays.asList(args)).size() == args.length) {
                 GameManager gameManager = new GameManager();
                 String computerChoice = gameManager.makeMove(args);
@@ -42,7 +42,7 @@ public class Main {
             }
         }
         else {
-            System.out.println("Error: The number of moves must exceed 0 and be a multiple of 3!");
+            System.out.println("Error: The number of moves must exceed 2 and be odd!");
         }
     }
 }
